@@ -19,10 +19,17 @@ const number = useTransition(baseNumber, {
   transition: [0.75, 0, 0.25, 1],
 });
 
-if (targetIsVisible) {
-  baseNumber.value = props.number;
-  console.log("visible");
-}
+watch(targetIsVisible, (newTargetIsVisible) => {
+  if (newTargetIsVisible) {
+    baseNumber.value = props.number;
+  } else {
+    baseNumber.value = 0;
+  }
+});
+
+onMounted(() => {
+  target.value = document.getElementById("compteurs");
+});
 </script>
 
 <template>

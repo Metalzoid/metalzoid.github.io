@@ -8,7 +8,6 @@
     </div>
     <div id="compteurProjects">
       <h1 class="projets animatedNumber">
-        <!-- + {{ projectsNumber.toFixed(0) }} -->
         <animateNumber :number="5" />
       </h1>
       <p>Projets 360<br />finalisés</p>
@@ -18,14 +17,12 @@
     <div id="compteurClients">
       <h1 class="clients animatedNumber">
         <animateNumber :number="7" />
-        <!-- + {{ clientsNumber.toFixed(0) }} -->
       </h1>
       <p>Clients<br />satisfaits</p>
     </div>
     <div id="compteurRedbull">
       <h1 class="redbull animatedNumber">
         <animateNumber :number="99" />
-        <!-- + {{ redbullNumber.toFixed(0) }} -->
       </h1>
       <p>Litres de <br />Redbull</p>
     </div>
@@ -62,6 +59,11 @@
     flex: 1 1 auto;
     display: flex;
     min-width: 260px;
+    justify-content: space-around;
+    h1,
+    p {
+      text-align: center;
+    }
 
     #compteurExperience {
       flex: 1 1 auto;
@@ -76,6 +78,10 @@
     display: flex;
     flex: 1 1 auto;
     min-width: 260px;
+    h1,
+    p {
+      text-align: center;
+    }
 
     #compteurClients {
       flex: 1 1 auto;
@@ -84,6 +90,38 @@
     #compteurRedbull {
       flex: 1 1 auto;
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #compteurs1 {
+    justify-content: center;
+    align-items: center;
+    flex: initial;
+    width: 100%;
+  }
+
+  #compteurs2 {
+    justify-content: center;
+    align-items: center;
+    flex: initial;
+    width: 100%;
+  }
+
+  #compteurExperience {
+    flex: initial;
+  }
+
+  #compteurProjects {
+    flex: initial;
+  }
+
+  #compteurClients {
+    flex: initial;
+  }
+
+  #compteurRedbull {
+    flex: initial;
   }
 }
 </style>

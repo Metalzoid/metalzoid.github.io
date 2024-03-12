@@ -94,4 +94,9 @@
     }
   }
 }
+@media only screen and (max-width: 855px) {
+  #hireMeIndex {
+    display: none;
+  }
+}
 </style>

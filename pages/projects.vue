@@ -1,259 +1,277 @@
+<script setup>
+import projectsData from "../data/projects.json";
+
+const languages = [];
+for (let project of projectsData) {
+  for (let language of project.language) {
+    if (languages.includes(language) == false) {
+      languages.push(language);
+    }
+  }
+}
+
+const selectedLanguage = ref(null);
+const page = ref(1);
+const projectsPerPage = 2;
+const projects = computed(() => {
+  const ret = [...projectsData];
+  ret.reverse();
+  return ret.filter((project) => {
+    if (selectedLanguage.value === null) {
+      return true;
+    } else {
+      return project.language.includes(selectedLanguage.value);
+    }
+  });
+});
+
+const sliced = computed(() => {
+  const ret = [...projects.value];
+  return ret.slice(
+    (page.value - 1) * projectsPerPage,
+    projectsPerPage * page.value
+  );
+});
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+function pagination(action) {
+  if (action === "next") {
+    if (page.value < projects.value.length / projectsPerPage) {
+      page.value++;
+      scrollToTop();
+    }
+  } else if (action === "prev") {
+    if (page.value > 1) {
+      page.value--;
+      scrollToTop();
+    }
+  } else {
+    if (action < page.value) {
+      page.value = action;
+      scrollToTop();
+    } else if (action > page.value) {
+      page.value = action;
+      scrollToTop();
+    }
+  }
+}
+
+const maxPage = computed(() => {
+  return Math.ceil(projects.value.length / projectsPerPage);
+});
+</script>
+
 <template>
-  <div id="main">
-    <div id="profil">
-      <div id="photoProfil">
-        <img class="photo" src="../img/gui.png" alt="Photo de moi" />
-      </div>
-      <div id="profilInfos">
-        <div id="infos">
-          <h5 class="name">Guillaume GAGNAIRE</h5>
-          <a href="mailto:guillaume@gagnaire.dev"
-            ><p class="email">guillaume@gagnaire.dev</p></a
-          >
-          <p class="localisation">Bordeaux</p>
-        </div>
-        <div id="social">
-          <a href="https://github.com/guillaume-gagnaire"
-            ><img
-              class="github"
-              src="../img/Icon Buttongithub.png"
-              alt="Mon GitHub"
-          /></a>
-          <a href="https://www.linkedin.com/in/guillaume-gagnaire"
-            ><img
-              class="linkedin"
-              src="../img/Icon Buttonlinkedin.png"
-              alt="Mon LinkedIn"
-          /></a>
-          <a href="https://www.malt.fr/profile/guillaumegagnaire"
-            ><img class="malt" src="../img/Icon Buttonmalt.png" alt="Mon Malt"
-          /></a>
-        </div>
-        <a href="/contact"
-          ><button type="button" class="button hireMeProfil orangeButton">
-            <img src="../img/iconEnvelopeWhite.png" /> Hire me !
-          </button></a
-        >
-      </div>
-    </div>
-    <div id="mainPage">
-      <div id="mainPageProjects">
+  <div>
+    <div id="main">
+      <Profil />
+      <div id="mainPage">
         <div id="introProjects">
           <h3><span>Projets</span> réalisés</h3>
-          <div id="projectsLanguage">
+          <div id="project1Button" class="projectLanguage">
             <button
-              id="allProjectsLanguage"
               type="button"
-              class="buttonLanguage active"
+              class="buttonLanguage"
+              :class="{ activeLanguage: selectedLanguage === null }"
+              @click="
+                selectedLanguage = null;
+                page = 1;
+              "
             >
               Tous
             </button>
             <button
-              id="nodejsProjectsLanguage"
               type="button"
               class="buttonLanguage"
+              v-for="language in languages"
+              :key="language"
+              :class="{ activeLanguage: selectedLanguage === language }"
+              @click="
+                selectedLanguage = language;
+                page = 1;
+              "
             >
-              Node.js
-            </button>
-            <button
-              id="vuejsProjectsLanguage"
-              type="button"
-              class="buttonLanguage"
-            >
-              Vue.js
-            </button>
-            <button
-              id="k8sProjectsLanguage"
-              type="button"
-              class="buttonLanguage"
-            >
-              K8S
-            </button>
-            <button
-              id="javascriptProjectsLanguage"
-              type="button"
-              class="buttonLanguage"
-            >
-              Javascript
-            </button>
-            <button
-              id="nuxtjsProjectsLanguage"
-              type="button"
-              class="buttonLanguage"
-            >
-              Nuxt.js
-            </button>
-            <button
-              id="pwaProjectsLanguage"
-              type="button"
-              class="buttonLanguage"
-            >
-              Pwa
+              {{ language }}
             </button>
           </div>
         </div>
-        <div id="projects">
-          <div id="project1" class="project">
-            <img src="../projects/smartmoov/smartmoov.png" />
-            <div id="project1Infos" class="projectInfos">
-              <p class="project1Title">
-                <strong>Smart Moov</strong> — Back Office Desktop et Mobile
-              </p>
-              <div id="project1Button" class="projectLanguage">
-                <button
-                  id="nodejsProjectsLanguage"
-                  type="button"
-                  class="buttonLanguage"
-                >
-                  Node.js
-                </button>
-                <button
-                  id="vuejsProjectsLanguage"
-                  type="button"
-                  class="buttonLanguage"
-                >
-                  Vue.js
-                </button>
-                <button
-                  id="k8sProjectsLanguage"
-                  type="button"
-                  class="buttonLanguage"
-                >
-                  K8S
-                </button>
-                <button
-                  id="pwaProjectsLanguage"
-                  type="button"
-                  class="buttonLanguage"
-                >
-                  Pwa
-                </button>
-              </div>
+
+        <div class="project" v-for="project in sliced" :key="project.id">
+          <ProjectPreview :projectID="project.id" />
+          <hr />
+        </div>
+
+        <div id="bottomProjects">
+          <div id="projectsCount">{{ projects.length }} résultats</div>
+          <div id="navProjects">
+            <button @click="pagination('prev')">
+              <font-awesome-icon
+                icon="fa-solid fa-chevron-left"
+                style="color: #ed682e"
+              />
+            </button>
+
+            <div
+              id="page"
+              v-for="projectPage in maxPage"
+              @click="pagination(projectPage)"
+              :class="{ activePage: page === projectPage }"
+            >
+              {{ projectPage }}
             </div>
-          </div>
-          <img src="../img/_Divider Horizontal_Divider.png" />
-          <div id="project2" class="project">
-            <img
-              src="../projects/goodmorningbusiness/goodmorningbusiness.png"
-            />
-            <div id="project2Infos" class="projectInfos">
-              <p class="project2Title">
-                <strong>Good Morning Business</strong> — Application Mobile
-              </p>
-              <div id="project2Button" class="projectLanguage">
-                <button
-                  id="nodejsProjectsLanguage"
-                  type="button"
-                  class="buttonLanguage"
-                >
-                  Node.js
-                </button>
-                <button
-                  id="vuejsProjectsLanguage"
-                  type="button"
-                  class="buttonLanguage"
-                >
-                  Vue.js
-                </button>
-                <button
-                  id="k8sProjectsLanguage"
-                  type="button"
-                  class="buttonLanguage"
-                >
-                  K8S
-                </button>
-                <button
-                  id="pwaProjectsLanguage"
-                  type="button"
-                  class="buttonLanguage"
-                >
-                  Pwa
-                </button>
-              </div>
-            </div>
-          </div>
-          <img src="../img/_Divider Horizontal_Divider.png" />
-          <div id="project3" class="project">
-            <img src="../projects/noci/noci.png" />
-            <div id="project3Infos" class="projectInfos">
-              <p class="project3Title">
-                <strong>Noci.io</strong> — Back Office Desktop
-              </p>
-              <div id="project3Button" class="projectLanguage">
-                <button
-                  id="nodejsProjectsLanguage"
-                  type="button"
-                  class="buttonLanguage"
-                >
-                  Node.js
-                </button>
-                <button
-                  id="vuejsProjectsLanguage"
-                  type="button"
-                  class="buttonLanguage"
-                >
-                  Vue.js
-                </button>
-                <button
-                  id="k8sProjectsLanguage"
-                  type="button"
-                  class="buttonLanguage"
-                >
-                  K8S
-                </button>
-                <button
-                  id="pwaProjectsLanguage"
-                  type="button"
-                  class="buttonLanguage"
-                >
-                  Pwa
-                </button>
-              </div>
-            </div>
-          </div>
-          <div id="bottomProjects">
-            <p><span>240</span> Résultats</p>
-            <div id="navigationProjects">
-              <button type="button" class="buttonNav">
-                <img src="../img/previousPageProjects.png" />
-              </button>
-              <div id="pageNumber">
-                <button type="button" class="active">1</button>
-                <button type="button">2</button>
-                <button type="button">3</button>
-                <button type="button">4</button>
-                <button type="button">5</button>
-                <button type="button">...</button>
-                <button type="button">10</button>
-              </div>
-              <button type="button" class="buttonNav">
-                <img src="../img/nextPageProjects.png" />
-              </button>
-            </div>
+
+            <button @click="pagination('next')">
+              <font-awesome-icon
+                icon="fa-solid fa-chevron-right"
+                style="color: #ed682e"
+              />
+            </button>
           </div>
         </div>
-        <div id="hireMeBottom" class="orangeButton">
-          <div id="hireMeBottomContent">
-            <img src="../img/hireMeBottomLogo.png" class="hireMeBottomLogo" />
-            <div id="hireMeBottomContentAndButton">
-              <h4>Besoin d’un accompagnement pour votre projet ?</h4>
-              <a href="/contact"
-                ><button type="button" class="button">
-                  <img src="../img/iconEnvelope.png" /> Hire me !
-                </button></a
-              >
-            </div>
-          </div>
-        </div>
-        <footer>
-          <img
-            src="../img/_Divider Horizontal_Divider.png"
-            class="footerDivider divider"
-          />
-          <img src="../img/guillaumeGAGNAIREFooter.png" class="footerLogo" />
-          <p>© 2023 Guillaume Gagnaire. Tous droits réservés.</p>
-        </footer>
       </div>
     </div>
   </div>
 </template>
+<style lang="scss">
+#mainPage {
+  #project1Button {
+    .buttonLanguage {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+      border-radius: 24px;
+      border: solid 0;
+      padding: 6px 16px;
+      margin: 5px;
+      &:hover {
+        box-shadow: 3px 5px 5px 0px rgba(16, 24, 40, 0.151);
+      }
+    }
+    .activeLanguage {
+      background: rgba(254, 237, 230, 1);
+      border: 1px solid rgba(255, 182, 151, 1);
+      box-shadow: 3px 5px 5px 0px rgba(16, 24, 40, 0.151);
+      color: rgba(237, 104, 46, 1);
+    }
+  }
+  #introProjects {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 15px 20px -12px rgba(67, 54, 35, 0.08);
+    border-radius: 32px;
+    padding: 0 32px 32px 32px;
+
+    h3 {
+      font-family: Plus Jakarta Sans;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 40px;
+      letter-spacing: -0.02em;
+      text-align: left;
+      color: rgba(38, 38, 38, 1);
+      span {
+        color: rgba(237, 104, 46, 1);
+      }
+    }
+    .projectLanguage {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      button {
+        margin: 0;
+      }
+    }
+  }
+  .imgProject {
+    height: auto;
+    width: 100%;
+    border-radius: 32px;
+  }
+  #bottomProjects {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    #projectsCount {
+      font-family: Plus Jakarta Sans;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+      text-wrap: nowrap;
+    }
+    #navProjects {
+      gap: 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      cursor: pointer;
+      button {
+        border: none;
+        cursor: pointer;
+      }
+      #page {
+        font-family: Plus Jakarta Sans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+      }
+      .pageID {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: rgba(97, 97, 107, 1);
+      }
+      .activePage {
+        background-color: rgba(237, 104, 46, 1);
+        font-family: Plus Jakarta Sans;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: white;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 855px) {
+  #main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    #mainPage {
+      justify-content: center;
+      align-items: center;
+      margin: 0 25px;
+      width: 100%;
+
+      #introProjects {
+        width: 80%;
+        margin: 15px;
+      }
+      .project {
+        width: 80%;
+      }
+    }
+  }
+}
+</style>

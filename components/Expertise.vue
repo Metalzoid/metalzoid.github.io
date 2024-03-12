@@ -4,7 +4,7 @@
       <font-awesome-icon
         icon="fa-solid fa-comment-dots"
         style="color: #ffffff"
-      /><span class="navButtonText">Expertise</span>
+      /><span>Expertise</span>
     </button>
   </div>
   <div id="expertiseLogos">
@@ -54,6 +54,7 @@
   margin: 24px auto;
   flex-wrap: wrap;
   gap: 22.5px;
+  justify-content: space-around;
 }
 
 .logos {
@@ -85,6 +86,13 @@
     position: relative;
     box-shadow: 0px 15px 20px -12px rgba(67, 54, 35, 0.08);
     transition: all 0.5s;
+  }
+}
+
+@media only screen and (max-width: 855px) {
+  #expertiseLogos {
+    justify-content: space-around;
+    align-items: center;
   }
 }
 </style>

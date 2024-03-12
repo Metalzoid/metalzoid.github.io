@@ -2,11 +2,11 @@
   <div id="badgeAPropos">
     <button class="navButton">
       <font-awesome-icon
-        icon="fa-solid fa-user"
+        icon="user"
         size="2xs"
         style="color: #000000"
         class="badgeUserIcon"
-      /><span class="navButtonText">À propos</span>
+      /><span>À propos</span>
     </button>
   </div>
   <h2>

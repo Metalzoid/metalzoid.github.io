@@ -3,10 +3,10 @@
     <img src="../img/hireMeBottomLogo.png" class="hireMeBottomLogo" />
     <div id="hireMeBottomContentAndButton">
       <h4>Besoin d’un accompagnement pour votre projet ?</h4>
-      <a href="/contact"
+      <NuxtLink to="/contact"
         ><button type="button" class="button">
           <img src="../img/iconEnvelope.png" /> Hire me !
-        </button></a
+        </button></NuxtLink
       >
     </div>
   </div>
@@ -60,6 +60,27 @@
   }
   #hireMeBottomContentAndButton {
     margin-left: 40px;
+  }
+}
+
+@media only screen and (max-width: 855px) {
+  #hireMeBottom {
+    border-radius: 44px;
+    min-width: fit-content;
+    #hireMeBottomContent {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 25px;
+      border-radius: 25px;
+      margin: 0;
+      max-width: none;
+      .hireMeBottomLogo {
+        display: none;
+      }
+      #hireMeBottomContentAndButton {
+        margin: 0;
+      }
+    }
   }
 }
 </style>

@@ -134,7 +134,7 @@ export default {
 
         <div id="formInputs">
           <div id="formNameDiv">
-            <div id="formfirstname">
+            <div id="formFirstname">
               <label for="firstname">Prénom</label>
               <input
                 type="text"
@@ -254,10 +254,37 @@ export default {
 </template>
 
 <style lang="scss">
+@media only screen and (max-width: 600px) {
+  #formNameDiv {
+    flex-direction: column;
+    #formFirstname {
+      margin-bottom: 15px;
+    }
+  }
+  #formContactInfos {
+    flex-direction: column;
+    #formEmail {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 855px) {
+  #mainPageContact {
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 10px 10px 10px;
+    footer {
+      display: none;
+    }
+  }
+}
+
 #mainPageContact {
   display: flex;
   justify-content: space-around;
   margin: 130px 60px 50px 60px;
+  gap: 15px;
 }
 
 #content {
@@ -349,10 +376,6 @@ footer {
   display: flex;
   flex-direction: column;
 
-  img {
-    width: 10vw;
-  }
-
   .footerParagraph {
     font-family: Plus Jakarta Sans;
     font-size: 14px;
@@ -371,7 +394,7 @@ footer {
   gap: 16px;
   padding: 0 32px 32px 32px;
   border-radius: 32px;
-  flex: 0.8;
+  flex: 0.9 0.1 auto;
 
   .errorMessage {
     position: absolute;
@@ -388,7 +411,6 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-width: 380px;
     #formTitle {
       font-family: Plus Jakarta Sans;
       font-size: 24px;
@@ -422,7 +444,7 @@ footer {
         flex-wrap: wrap;
       }
 
-      #formfirstname {
+      #formFirstname {
         display: flex;
         flex-direction: column;
         font-family: Plus Jakarta Sans;
@@ -689,26 +711,6 @@ footer {
         }
       }
     }
-  }
-}
-
-@media only screen and (max-width: 855px) {
-  #mainPageContact {
-    flex-direction: column;
-    align-items: center;
-    margin: 50px 10px 10px 10px;
-    footer {
-      display: none;
-    }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #formNameDiv {
-    flex-direction: column;
-  }
-  #formContactInfos {
-    flex-direction: column;
   }
 }
 </style>
