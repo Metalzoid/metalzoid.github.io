@@ -9,16 +9,14 @@
     </a>
   </div>
   <h1>
-    Salut 👋 ! Je suis <span>Guillaume</span>, CTO et développeur web fullstack
-    freelance.
+    Salut 👋 ! Je suis <span>Florian</span>, développeur web fullstack Junior !
   </h1>
   <p>
     <span
-      ><strong>Je vous accompagne sur vos projets les plus fous !</strong></span
+      ><strong>Je vous accompagne sur vos projets de A à Z !</strong></span
     >
     Porteur de projet ? Du budget mais aucune compétence technique ?
-    <strong>Je conçois, développe et déploie votre produit</strong>, du MVP à la
-    release, et vous accompagne pour vous staffer correctement !
+    <strong>Je conçois, développe et déploie votre produit</strong>, et vous accompagne pour vous staffer correctement !
   </p>
 </template>
 <style lang="scss">

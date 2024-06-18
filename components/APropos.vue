@@ -15,21 +15,10 @@
   </h2>
   <p>
     <span
-      >Avec une expérience de plus de 8 ans, je me suis forgé une expertise
-      solide dans le monde numérique.</span
+      >Avec un diplôme de Developpeur Web obtenu à l'école LeWagon de Bordeaux,</span
     >
-    J'ai pu accompagner des start-ups dans des univers radicalement différents
-    (intérim, chatbot, conseil produit, marketing) et ma vision orientée
-    business, ainsi que mon esprit d'entrepreneur me permettent de m'adapter
-    facilement à votre vision, votre besoin.
-  </p>
-  <p>
-    Votre CTO à la naissance de votre startup n'est pas forcément le même CTO
-    dont vous aurez besoin lorsque vous aurez une équipe complète de
-    développeurs.<span>
-      C'est pourquoi je vous accompagne sur les phases de conception et de mise
-      en oeuvre de votre produit pour votre V1, ou votre refonte de V2 !</span
-    >
+    j'ai acquis les compétences nécessaires pour vous accompagner dans tous vos projets.
+
   </p>
   <p>
     Vision globale, mais les mains dans le cambouis,

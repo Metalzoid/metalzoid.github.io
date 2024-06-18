@@ -90,7 +90,7 @@ export default {
       </p>
       <hr />
       <div id="profilContact">
-        <img src="../img/gui.png" alt="Photo de Moi" class="photoProfil" />
+        <img src="../img/flo.png" alt="Photo de Moi" class="photoProfil" />
 
         <div id="infosProfil">
           <a href="mailto:guillaume@gagnaire.dev">guillaume@gagnaire.dev</a>

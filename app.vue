@@ -79,7 +79,7 @@ function scrollToTopMain() {
             <nav id="mobileNav">
               <div id="profilMobile">
                 <div id="photoProfilMobile">
-                  <img src="/img/gui.png" alt="Photo de moi" />
+                  <img src="/img/flo.png" alt="Photo de moi" />
                 </div>
                 <div id="profilInfosMobile">
                   <div id="infosMobile">

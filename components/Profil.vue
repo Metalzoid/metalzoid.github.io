@@ -1,32 +1,32 @@
 <template>
   <div id="profil">
     <div id="photoProfil">
-      <img src="../img/gui.png" alt="Photo de moi" />
+      <img src="../img/flo.png" alt="Photo de moi" />
     </div>
     <div id="profilInfos">
       <div id="infos">
-        <h5 class="name">Guillaume GAGNAIRE</h5>
-        <a href="mailto:guillaume@gagnaire.dev"
-          ><p class="email">guillaume@gagnaire.dev</p></a
+        <h5 class="name">Florian GAGNAIRE</h5>
+        <a href="mailto:gagnaire.flo@gmail.com"
+          ><p class="email">gagnaire.flo@gmail.com</p></a
         >
         <p class="localisation">Bordeaux</p>
       </div>
       <div id="social">
-        <a href="https://github.com/guillaume-gagnaire"
+        <a href="https://github.com/Metalzoid"
           ><img
             class="github"
             src="../img/Icon Buttongithub.png"
             alt="Mon GitHub"
         /></a>
-        <a href="https://www.linkedin.com/in/guillaume-gagnaire"
+        <a href="https://www.linkedin.com/in/florian-gagnaire-24606a294/"
           ><img
             class="linkedin"
             src="../img/Icon Buttonlinkedin.png"
             alt="Mon LinkedIn"
         /></a>
-        <a href="https://www.malt.fr/profile/guillaumegagnaire"
+        <!-- <a href="https://www.malt.fr/profile/guillaumegagnaire"
           ><img class="malt" src="../img/Icon Buttonmalt.png" alt="Mon Malt"
-        /></a>
+        /></a> -->
       </div>
       <NuxtLink to="/contact" class="hireMeProfilLink"
         ><button type="button" class="button hireMeProfil orangeButton">
@@ -60,9 +60,10 @@
     width: 324px;
     border-radius: 42px;
     gap: 10px;
+    overflow: hidden;
     img {
       height: 400px;
-      width: 324px;
+      width: 380px;
       object-fit: cover;
       border-radius: 42px;
     }
