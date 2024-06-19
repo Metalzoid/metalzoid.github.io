@@ -1,5 +1,5 @@
 <script setup lang="js">
-import projectsData from "/_nuxt/assets/data/projects.json";
+import projectsData from "~/assets/data/projects.json";
 
 const projects = projectsData.slice(-3)
 projects.reverse();
