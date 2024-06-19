@@ -16,7 +16,7 @@
       <span
         ><strong>Je vous accompagne sur vos projets de A à Z !</strong></span
       >
-      Porteur de projet ? Du budget mais aucune compétence technique ?
+      Porteur de projet ? Du budget mais aucunes compétences technique ?
       <strong>Je conçois, développe et déploie votre produit</strong>, et vous accompagne pour vous staffer correctement !
     </p>
   </div>

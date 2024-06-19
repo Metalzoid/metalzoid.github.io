@@ -1,8 +1,8 @@
 <template>
   <footer>
     <hr />
-    <img src="../assets/img/guillaumeGAGNAIREFooter.png" class="footerLogo" />
-    <p>© 2023 Guillaume Gagnaire. Tous droits réservés.</p>
+    <img src="../assets/img/logo.png" class="footerLogo" />
+    <p>© 2024 Florian Gagnaire. Tous droits réservés.</p>
   </footer>
 </template>
 <style lang="scss">
@@ -17,6 +17,7 @@ footer {
 
   img {
     align-items: center;
+    width: 350px;
 
   }
 

@@ -10,25 +10,26 @@
         /><span>À propos</span>
       </button>
     </div>
-  <h2>
-    Je vous accompagne sur
-    <span>toutes les phases de conception de votre produit.</span>
-  </h2>
-  <p>
-    <span
-      >Avec un diplôme de Developpeur Web obtenu à l'école LeWagon de Bordeaux,</span
-    >
-    j'ai acquis les compétences nécessaires pour vous accompagner dans tous vos projets.
+    <h2>
+      Je vous accompagne sur
+      <span>toutes les phases de conception de votre produit.</span>
+    </h2>
+    <p>
+      <span
+        >Avec un diplôme de Developpeur Web obtenu à l'école LeWagon de Bordeaux,</span
+      >
+      j'ai acquis les compétences nécessaires pour vous accompagner dans tous vos projets.
 
-  </p>
-  <p>
-    Vision globale, mais les mains dans le cambouis,
-    <span
-      >je donne vie à vos projets et vous accompagne sur les différentes
-      évolutions de votre produit</span
-    >
-    pour s'adapter à ce qui compte véritablement : vos clients.
-  </p>
+    </p>
+    <p>
+      Vision globale, mais les mains dans le cambouis,
+      <span
+        >je donne vie à vos projets et vous accompagne sur les différentes
+        évolutions de votre produit</span
+      >
+      pour s'adapter à ce qui compte véritablement : vos clients.
+    </p>
+  </div>
 </template>
 <style lang="scss">
 .badgeUserIcon {
