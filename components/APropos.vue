@@ -1,14 +1,15 @@
 <template>
-  <div id="badgeAPropos">
-    <button class="navButton">
-      <font-awesome-icon
-        icon="user"
-        size="2xs"
-        style="color: #000000"
-        class="badgeUserIcon"
-      /><span>À propos</span>
-    </button>
-  </div>
+  <div id="aPropos">
+    <div id="badgeAPropos">
+      <button class="navButton">
+        <font-awesome-icon
+          icon="user"
+          size="2xs"
+          style="color: #000000"
+          class="badgeUserIcon"
+        /><span>À propos</span>
+      </button>
+    </div>
   <h2>
     Je vous accompagne sur
     <span>toutes les phases de conception de votre produit.</span>
@@ -37,8 +38,6 @@
 }
 
 #aPropos {
-  margin-bottom: -50px;
-  margin-top: 72px;
 
   h2 {
     font-family: Plus Jakarta Sans;
@@ -53,6 +52,14 @@
 
     span {
       color: rgba(237, 104, 46, 1);
+      font-family: Plus Jakarta Sans;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 48px;
+      letter-spacing: -0.02em;
+      text-align: left;
+      text-wrap: wrap;
+      max-width: 792px;
     }
   }
 
@@ -74,6 +81,7 @@
       line-height: 28px;
       letter-spacing: 0em;
       text-align: left;
+      color: rgba(38, 38, 38, 1);
     }
   }
 }

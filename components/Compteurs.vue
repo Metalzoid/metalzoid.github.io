@@ -1,37 +1,38 @@
 <template>
-  <div id="compteurs1">
-    <div id="compteurExperience">
-      <h1 class="exp animatedNumber">
-        <animateNumber :number="12" />
-      </h1>
-      <p>Années<br />d'expérience</p>
+  <div id="compteurs">
+    <div id="compteurs1">
+      <div id="compteurExperience">
+        <h1 class="exp animatedNumber">
+          <animateNumber :number="8" />
+        </h1>
+        <p>Années<br />d'expérience</p>
+      </div>
+      <div id="compteurProjects">
+        <h1 class="projets animatedNumber">
+          <animateNumber :number="6" />
+        </h1>
+        <p>Projets 360<br />finalisés</p>
+      </div>
     </div>
-    <div id="compteurProjects">
-      <h1 class="projets animatedNumber">
-        <animateNumber :number="5" />
-      </h1>
-      <p>Projets 360<br />finalisés</p>
-    </div>
-  </div>
-  <div id="compteurs2">
-    <div id="compteurClients">
-      <h1 class="clients animatedNumber">
-        <animateNumber :number="7" />
-      </h1>
-      <p>Clients<br />satisfaits</p>
-    </div>
-    <div id="compteurRedbull">
-      <h1 class="redbull animatedNumber">
-        <animateNumber :number="99" />
-      </h1>
-      <p>Litres de <br />Redbull</p>
+    <div id="compteurs2">
+      <div id="compteurClients">
+        <h1 class="clients animatedNumber">
+          <animateNumber :number="7" />
+        </h1>
+        <p>Clients<br />satisfaits</p>
+      </div>
+      <div id="compteurRedbull">
+        <h1 class="redbull animatedNumber">
+          <animateNumber :number="42" />
+        </h1>
+        <p>Litres de <br />Redbull</p>
+      </div>
     </div>
   </div>
 </template>
 <style lang="scss">
 #compteurs {
   display: flex;
-  margin-top: 30px;
   flex-wrap: wrap;
 
   h1 {

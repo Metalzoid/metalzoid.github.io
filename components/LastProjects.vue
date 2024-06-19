@@ -27,23 +27,20 @@ projects.reverse();
       ></NuxtLink>
     </div>
     <div class="firstProject">
-      <ProjectPreview
-        :projectID="projects[0].id"
-        :projectLanguage="projects[0].language"
-      />
+      <NuxtLink :to="`/projects/${projects[0].id}`">
+        <ProjectPreview :projectID="projects[0].id" />
+      </NuxtLink>
     </div>
     <div id="horizontalLastProjects">
       <div id="project2" class="project">
-        <ProjectPreview
-          :projectID="projects[1].id"
-          :projectLanguage="projects[1].language"
-        />
+        <NuxtLink :to="`/projects/${projects[1].id}`">
+          <ProjectPreview :projectID="projects[1].id" />
+        </NuxtLink>
       </div>
       <div id="project3" class="project">
-        <ProjectPreview
-          :projectID="projects[2].id"
-          :projectLanguage="projects[2].language"
-        />
+        <NuxtLink :to="`/projects/${projects[2].id}`">
+          <ProjectPreview :projectID="projects[2].id" />
+        </NuxtLink>
       </div>
     </div>
     <NuxtLink to="/projects"
@@ -59,7 +56,6 @@ projects.reverse();
 #lastProjects {
   display: flex;
   flex-direction: column;
-  padding-top: 72px;
   gap: 24px;
 
   a {
@@ -84,8 +80,13 @@ projects.reverse();
       letter-spacing: -0.02em;
       text-align: left;
       color: rgba(23, 23, 23, 1);
-
       span {
+        font-family: Plus Jakarta Sans;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 48px;
+        letter-spacing: -0.02em;
+        text-align: left;
         color: rgba(237, 104, 46, 1);
       }
     }
@@ -93,22 +94,28 @@ projects.reverse();
 
   #horizontalLastProjects {
     display: flex;
-    gap: 32px;
+    justify-content: space-between;
+    flex: 1 1 auto;
     @media only screen and (max-width: 1255px) {
       flex-direction: column;
+      max-width: 100%;
     }
     .project {
       display: flex;
       flex-direction: column;
-      margin-bottom: 72px;
+      margin-bottom: 30px;
       display: flex;
-      flex: 1;
+      flex: 1 1 auto;
       flex-direction: column;
-      max-width: 50%;
+      max-width: 49%;
+      #projectInfos {
+        flex-direction: column;
+      }
       @media only screen and (max-width: 1255px) {
         margin-bottom: 24px;
-        max-width: 100%;
         height: auto;
+        max-width: 100%;
+        width: 100%;
       }
     }
   }
@@ -146,6 +153,9 @@ projects.reverse();
 
     .lastProject {
       max-width: 100%;
+    }
+    .project {
+      width: 100% !important;
     }
 
     .buttonProjects {

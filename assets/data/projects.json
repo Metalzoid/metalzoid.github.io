@@ -5,12 +5,18 @@
     "description": "Office Desktop",
     "imagePreview": "/_nuxt/assets/projects/noci/preview.png",
     "language": ["Node.js", "Vue.js", "K8S"],
-    "images": ["image1.png", "image2.png"],
-    "intro": "",
+    "images": [
+      "/_nuxt/assets/projects/noci/1.png",
+      "/_nuxt/assets/projects/noci/1.png",
+      "/_nuxt/assets/projects/noci/1.png",
+      "/_nuxt/assets/projects/noci/1.png"
+    ],
+    "intro": "courte description du project",
     "content": "",
     "opinion": {
-      "photo": "photoClient.png",
-      "name": "",
+      "photo": "/_nuxt/assets/projects/noci/photoClient.png",
+      "name": "Test TEst",
+      "initial": "TT",
       "company": "",
       "date": "",
       "message": ""
@@ -22,11 +28,15 @@
     "description": "Application Mobile",
     "language": ["Node.js", "Vue.js", "K8S", "Pwa"],
     "imagePreview": "/_nuxt/assets/projects/goodmorningbusiness/preview.png",
-    "images": ["image1.png", "image2.png"],
+    "images": [
+      "/_nuxt/assets/projects/goodmorningbusiness/1.png",
+      "/_nuxt/assets/projects/goodmorningbusiness/1.png",
+      "/_nuxt/assets/projects/goodmorningbusiness/1.png"
+    ],
     "intro": "",
     "content": "",
     "opinion": {
-      "photo": "photoClient.png",
+      "photo": "/_nuxt/assets/projects/smartmoov/photoClient.png",
       "name": "",
       "company": "",
       "date": "",
@@ -37,68 +47,23 @@
     "id": "smartmoov",
     "name": "SmartMoov",
     "description": "Back office Desktop et Mobile",
-    "language": ["Node.js", "Vue.js", "K8S", "Pwa"],
+    "language": ["Node.js", "Vue.js", "K8S", "Pwa", "HTML5"],
     "imagePreview": "/_nuxt/assets/projects/smartmoov/preview.png",
-    "images": ["image1.png", "image2.png"],
-    "intro": "",
-    "content": "",
+    "images": [
+      "/_nuxt/assets/projects/smartmoov/1.png",
+      "/_nuxt/assets/projects/smartmoov/2.png",
+      "/_nuxt/assets/projects/smartmoov/3.png",
+      "/_nuxt/assets/projects/smartmoov/4.png"
+    ],
+    "intro": "Un Back Office intuitif : La Puissance discrète d’une App de Recrutement d'Intérim Plongez dans l'univers efficace et dynamique d’une application de recrutement d'intérim grâce à un Back Office sophistiqué. Derrière l'interface et l'expérience utilisateur transparente se cache une véritable machinerie, conçue pour répondre à vos besoins de gestion, de suivi et d'optimisation.",
+    "content": "La prise de décision éclairée est au cœur de notre Back Office. Notre tableau de bord analytique transforme les données en informations exploitables, vous permettant de surveiller et d'optimiser vos performances en temps réel. Suivez le nombre d'offres actives, l'état des candidatures, les taux de conversion et bien plus encore. Ces informations précieuses vous aident à ajuster vos stratégies de recrutement pour atteindre des résultats toujours meilleurs.Facilitez la communication avec les candidats et les clients grâce à notre système de messagerie intégré. Échangez des informations, planifiez des entretiens et partagez des mises à jour sans effort. Cette fonctionnalité favorise la collaboration transparente entre les membres de votre équipe, tout en offrant une expérience fluide aux candidats et aux clients.Chaque entreprise est unique, c'est pourquoi notre Back Office offre des options de personnalisation avancées. Adaptez les flux de travail, les modèles de communication et les paramètres de suivi selon vos préférences et besoins spécifiques. L'outil s'ajuste à votre entreprise, et non l'inverse. En résumé, notre Back Office redéfinit l'efficacité dans le domaine du recrutement d'intérim. Avec son interface intuitive, sa gestion complète du processus, son tableau de bord analytique, sa communication simplifiée et sa personnalisation avancée, il devient le pivot de votre stratégie de recrutement, vous permettant d'atteindre de nouveaux sommets en matière de gestion du personnel intérimaire.",
     "opinion": {
-      "photo": "photoClient.png",
-      "name": "",
-      "company": "",
-      "date": "",
-      "message": ""
-    }
-  },
-  {
-    "id": "smartmoov2",
-    "name": "SmartMoov2",
-    "description": "Back office Desktop et Mobile2",
-    "language": ["Node.js", "Vue.js", "K8S", "Pwa"],
-    "imagePreview": "/_nuxt/assets/projects/smartmoov/preview.png",
-    "images": ["image1.png", "image2.png"],
-    "intro": "",
-    "content": "",
-    "opinion": {
-      "photo": "photoClient.png",
-      "name": "",
-      "company": "",
-      "date": "",
-      "message": ""
-    }
-  },
-  {
-    "id": "smartmoov3",
-    "name": "SmartMoov3",
-    "description": "Back office Desktop et Mobile3",
-    "language": ["Node.js", "Vue.js", "K8S", "Pwa"],
-    "imagePreview": "/_nuxt/assets/projects/smartmoov/preview.png",
-    "images": ["image1.png", "image2.png"],
-    "intro": "",
-    "content": "",
-    "opinion": {
-      "photo": "photoClient.png",
-      "name": "",
-      "company": "",
-      "date": "",
-      "message": ""
-    }
-  },
-  {
-    "id": "smartmoov4",
-    "name": "SmartMoov4",
-    "description": "Back office Desktop et Mobile",
-    "language": ["Node.js", "Vue.js", "K8S", "Pwa"],
-    "imagePreview": "/_nuxt/assets/projects/smartmoov/preview.png",
-    "images": ["image1.png", "image2.png"],
-    "intro": "",
-    "content": "",
-    "opinion": {
-      "photo": "photoClient.png",
-      "name": "",
-      "company": "",
-      "date": "",
-      "message": ""
+      "photo": "/_nuxt/assets/projects/smartmoov/photoClient.png",
+      "name": "Prénom nom",
+      "initial": "PN",
+      "company": "Smartmoov",
+      "date": "14/01/17",
+      "message": "Guillaume c'est le talent technique dont vous avez besoin. Niveau dev, il excelle. Humainement, c'est le top.Et a cela , il ajoute une vrai connaisance sur les sujets transverses a la tech (design , marketing, ...) Ce n'est pas pour rien si nous continus a faire appel à lui en tant que Freelance après 3 ans de salariat Noci"
     }
   }
 ]

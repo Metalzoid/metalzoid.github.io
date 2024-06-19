@@ -7,55 +7,57 @@ const items = opinionsData;
 </script>
 
 <template>
-  <div>
-    <div id="badgeopinionsClients" class="badgeNav">
-      <button class="navButton">
-        <font-awesome-icon
-          icon="fa-solid fa-star"
-          size="sm"
-          style="color: #ffffff"
-        /><span>Avis clients</span>
-      </button>
-    </div>
-    <div id="introOpinions">
-      <h2>Ils m'ont fait <span>confiance !</span></h2>
-    </div>
+  <div id="avisClients">
+    <div id="test">
+      <div id="badgeopinionsClients" class="badgeNav">
+        <button class="navButton">
+          <font-awesome-icon
+            icon="fa-solid fa-star"
+            size="sm"
+            style="color: #ffffff"
+          /><span>Avis clients</span>
+        </button>
+      </div>
+      <div id="introOpinions">
+        <h2>Ils m'ont fait <span>confiance !</span></h2>
+      </div>
 
-    <Carousel
-      ref="carouselAvis"
-      :wrap-around="true"
-      :items-to-show="1"
-      snap-align="center"
-    >
-      <Slide v-for="item in items" :key="item.id" :index="item.id">
-        <div id="carousel__item">
-          <div id="opinionsClientsBox">
-            <div id="enTeteopinionsClient">
-              <div id="logoClient" class="orangeButton">
-                <p class="initialeClient">{{ item.initial }}</p>
-              </div>
-              <div id="clientInfos">
-                <h3>{{ item.name }}</h3>
-                <div id="entNameDate">
-                  <span class="entrepriseName">{{ item.company }}</span>
-                  <span class="separate">•</span>
-                  <span class="date">{{ item.date }}</span>
+      <Carousel
+        ref="carouselAvis"
+        :wrap-around="true"
+        :items-to-show="1"
+        snap-align="center"
+      >
+        <Slide v-for="item in items" :key="item.id" :index="item.id">
+          <div id="carousel__item">
+            <div id="opinionsClientsBox">
+              <div id="enTeteopinionsClient">
+                <div id="logoClient" class="orangeButton">
+                  <p class="initialeClient">{{ item.initial }}</p>
+                </div>
+                <div id="clientInfos">
+                  <h3>{{ item.name }}</h3>
+                  <div id="entNameDate">
+                    <span class="entrepriseName">{{ item.company }}</span>
+                    <span class="separate">•</span>
+                    <span class="date">{{ item.date }}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div id="opinions">
-              <p class="opinions">
-                {{ item.opinion }}
-              </p>
+              <div id="opinions">
+                <p class="opinions">
+                  <CuttableText :text="item.opinion" :max="210" />
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </Slide>
-      <template #addons>
-        <Navigation />
-        <Pagination />
-      </template>
-    </Carousel>
+        </Slide>
+        <template #addons>
+          <Navigation />
+          <Pagination />
+        </template>
+      </Carousel>
+    </div>
   </div>
 </template>
 <style lang="scss">
@@ -70,6 +72,12 @@ const items = opinionsData;
     color: rgba(23, 23, 23, 1);
 
     span {
+      font-family: Plus Jakarta Sans;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 48px;
+      letter-spacing: -0.02em;
+      text-align: left;
       color: rgba(237, 104, 46, 1);
     }
   }
@@ -80,6 +88,7 @@ const items = opinionsData;
   min-width: 100%;
   border: solid 1px rgba(221, 205, 195, 1);
   border-radius: 32px;
+  transition: all 0.5s;
   &:hover {
     border-color: rgba(237, 104, 46, 1);
   }
@@ -87,7 +96,7 @@ const items = opinionsData;
     display: flex;
     flex-direction: column;
     padding: 0 20px;
-
+    border: none;
     #enTeteopinionsClient {
       display: flex;
       flex-direction: row;
@@ -174,5 +183,9 @@ const items = opinionsData;
   }
 }
 
-/* Navigation opinions */
+@media only screen and (max-width: 379px) {
+  #avisClients {
+    display: none;
+  }
+}
 </style>

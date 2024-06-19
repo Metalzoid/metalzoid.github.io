@@ -96,24 +96,30 @@ export default {
           <a href="mailto:guillaume@gagnaire.dev">guillaume@gagnaire.dev</a>
           <p class="localisation">Bordeaux</p>
           <div id="social">
-            <a href="https://github.com/guillaume-gagnaire"
-              ><img
-                class="github"
-                src="../assets/img/Icon Buttongithub.png"
-                alt="Mon GitHub"
-            /></a>
-            <a href="https://www.linkedin.com/in/guillaume-gagnaire"
-              ><img
-                class="linkedin"
-                src="../assets/img/Icon Buttonlinkedin.png"
-                alt="Mon LinkedIn"
-            /></a>
-            <a href="https://www.malt.fr/profile/guillaumegagnaire"
-              ><img
-                class="malt"
-                src="../assets/img/Icon Buttonmalt.png"
-                alt="Mon Malt"
-            /></a>
+            <div class="socialLinks">
+              <a href="https://github.com/Metalzoid"
+                ><img
+                  class="github"
+                  src="../assets/img/Icon Buttongithub.png"
+                  alt="Mon GitHub"
+              /></a>
+            </div>
+            <div class="socialLinks">
+              <a href="https://www.linkedin.com/in/florian-gagnaire-24606a294/"
+                ><img
+                  class="linkedin"
+                  src="../assets/img/Icon Buttonlinkedin.png"
+                  alt="Mon LinkedIn"
+              /></a>
+            </div>
+            <!-- <div class="socialLinks">
+              <a href="https://www.malt.fr/profile/guillaumegagnaire"
+                ><img
+                  class="malt"
+                  src="../img/Icon Buttonmalt.png"
+                  alt="Mon Malt"
+              /></a>
+            </div> -->
           </div>
         </div>
       </div>
@@ -269,7 +275,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 855px) {
+@media only screen and (max-width: 925px) {
   #mainPageContact {
     flex-direction: column;
     align-items: center;
@@ -277,9 +283,17 @@ export default {
     footer {
       display: none;
     }
+    #content {
+      align-items: center;
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
   }
 }
-
 #mainPageContact {
   display: flex;
   justify-content: space-around;
@@ -301,6 +315,12 @@ export default {
     max-width: 390px;
 
     span {
+      font-family: Plus Jakarta Sans;
+      font-size: 52px;
+      font-weight: 400;
+      line-height: 63px;
+      letter-spacing: -0.02em;
+      text-align: left;
       color: rgba(237, 104, 46, 1);
     }
   }
@@ -367,6 +387,21 @@ export default {
     }
     #social {
       margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      .socialLinks {
+        border: solid 1px rgba(221, 205, 195, 1);
+        border-radius: 50%;
+        padding: 12px;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        &:hover {
+          border-color: rgba(237, 104, 46, 1);
+        }
+      }
     }
   }
 }
@@ -395,7 +430,7 @@ footer {
   padding: 0 32px 32px 32px;
   border-radius: 32px;
   flex: 0.9 0.1 auto;
-
+  max-width: 1000px;
   .errorMessage {
     position: absolute;
     background-color: white;
@@ -421,6 +456,12 @@ footer {
       color: rgba(38, 38, 38, 1);
 
       span {
+        font-family: Plus Jakarta Sans;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: -0.02em;
+        text-align: left;
         color: rgba(237, 104, 46, 1);
       }
     }
