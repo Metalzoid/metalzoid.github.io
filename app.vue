@@ -1,13 +1,12 @@
 <script setup>
 const route = useRoute();
-
 let mobileChecked = ref(false);
 function toggleNavMobile() {
   if (window.innerWidth < 855) {
     mobileChecked.value = false;
   }
 }
-function scrollToTop(x) {
+function scrollToTop() {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
@@ -39,28 +38,23 @@ function scrollToTopMain() {
           <div id="nav">
             <ul class="nav">
               <li>
-                <NavigationLink
-                  link="/"
-                  activeElementId="intro"
-                  @click="scrollToTopMain()"
+                <NavigationLink link="/" @click="scrollToTopMain()"
                   >Acceuil</NavigationLink
                 >
               </li>
               <li>
-                <NavigationLink link="/projects" activeElementId="lastProjects"
+                <NavigationLink
+                  link="/projects"
+                  :class="{ active: route.path.includes('projects') }"
                   >Projets Réalisés</NavigationLink
                 >
               </li>
               <li>
-                <NavigationLink
-                  link="/contact"
-                  activeElementId="mainPageContact"
-                  >Contact</NavigationLink
-                >
+                <NavigationLink link="/contact">Contact</NavigationLink>
               </li>
             </ul>
           </div>
-          <NuxtLink to="/contact" class="hireMeNav"
+          <NuxtLink to="/contact"
             ><button type="button" class="button hireMeNav orangeButton">
               <font-awesome-icon
                 icon="fa-solid fa-envelope"
@@ -83,31 +77,30 @@ function scrollToTopMain() {
                 </div>
                 <div id="profilInfosMobile">
                   <div id="infosMobile">
-                    <NuxtLink to="mailto:guillaume@gagnaire.dev"
-                      ><p class="email">guillaume@gagnaire.dev</p></NuxtLink
+                    <a href="mailto:guillaume@gagnaire.dev"
+                      ><p class="email">guillaume@gagnaire.dev</p></a
                     >
                     <p class="localisation">Bordeaux</p>
                   </div>
                   <div id="socialMobile">
-                    <NuxtLink to="https://github.com/guillaume-gagnaire"
+                    <a href="https://github.com/guillaume-gagnaire"
                       ><img
                         class="github"
                         src="/img/Icon Buttongithub.png"
                         alt="Mon GitHub"
-                    /></NuxtLink>
-                    <NuxtLink
-                      to="https://www.linkedin.com/in/guillaume-gagnaire"
+                    /></a>
+                    <a href="https://www.linkedin.com/in/guillaume-gagnaire"
                       ><img
                         class="linkedin"
                         src="/img/Icon Buttonlinkedin.png"
                         alt="Mon LinkedIn"
-                    /></NuxtLink>
-                    <NuxtLink to="https://www.malt.fr/profile/guillaumegagnaire"
+                    /></a>
+                    <a href="https://www.malt.fr/profile/guillaumegagnaire"
                       ><img
                         class="malt"
                         src="/img/Icon Buttonmalt.png"
                         alt="Mon Malt"
-                    /></NuxtLink>
+                    /></a>
                   </div>
                 </div>
               </div>
@@ -246,6 +239,9 @@ header {
   justify-content: center;
   text-decoration: none;
   gap: 5px;
+  &:hover {
+    box-shadow: 1px 3px 3px 1px rgba(41, 43, 50, 0.2);
+  }
 }
 
 #nav {
@@ -341,7 +337,7 @@ header {
       visibility: hidden;
     }
     .hireMeNav {
-      visibility: hidden;
+      display: none;
     }
     #mobileNavDiv {
       height: 100%;
@@ -442,6 +438,10 @@ header {
         }
         #socialMobile {
           margin-top: -3px;
+          display: flex;
+          a {
+            flex: 1 1 auto;
+          }
         }
       }
     }

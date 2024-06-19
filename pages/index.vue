@@ -4,29 +4,15 @@
       <Profil />
       <div id="mainPage">
         <div id="intro">
-          <div id="presentation">
-            <Presentation />
-          </div>
+          <Presentation />
           <hr />
-          <div id="compteurs">
-            <Compteurs />
-          </div>
+          <Compteurs />
         </div>
-        <div id="aPropos">
-          <APropos />
-        </div>
-
+        <APropos />
         <LastProjects />
-
-        <div id="expertise">
-          <Expertise />
-        </div>
-        <div id="avisClients">
-          <AvisClients />
-        </div>
-        <div id="hireMeBottom" class="orangeButton">
-          <HireMeBottomIndex />
-        </div>
+        <Expertise />
+        <AvisClients />
+        <HireMeBottomIndex />
         <FooterPage />
       </div>
     </div>
@@ -77,6 +63,9 @@
   }
 }
 
+#projectInfos {
+  flex-wrap: wrap;
+}
 @media only screen and (max-width: 855px) {
   #main {
     flex-direction: column;
@@ -89,4 +78,5 @@
     }
   }
 }
+
 </style>

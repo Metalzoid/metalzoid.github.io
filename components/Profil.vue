@@ -44,8 +44,8 @@
 <style lang="scss">
 #profil {
   background-color: white;
-  height: 740px;
-  width: 372px;
+  height: 720px;
+  max-width: 340px;
   border-radius: 32px;
   padding: 24px;
   gap: 38px;
@@ -54,10 +54,12 @@
   flex-direction: column;
   align-items: center;
   margin: 0 20px;
+  width: 40%;
   #photoProfil {
     background: linear-gradient(180deg, #ff6f47 0%, #ff9447 100%);
     height: 400px;
-    width: 324px;
+    width: 100%;
+    max-width: 324px;
     border-radius: 42px;
     gap: 10px;
     overflow: hidden;
@@ -79,7 +81,6 @@
     }
 
     #infos {
-      width: 324px;
       height: 108px;
 
       .name {
@@ -127,6 +128,18 @@
       width: 100%;
       justify-content: center;
       gap: 16px;
+      .socialLinks {
+        border: solid 1px rgba(221, 205, 195, 1);
+        border-radius: 50%;
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        &:hover {
+          border-color: rgba(237, 104, 46, 1);
+        }
+      }
     }
 
     .hireMeProfilLink {

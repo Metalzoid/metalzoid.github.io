@@ -1,6 +1,6 @@
 <script setup>
 import projectsData from "../data/projects.json";
-
+const route = useRoute();
 const languages = [];
 for (let project of projectsData) {
   for (let language of project.language) {
@@ -9,7 +9,6 @@ for (let project of projectsData) {
     }
   }
 }
-
 const selectedLanguage = ref(null);
 const page = ref(1);
 const projectsPerPage = 2;
@@ -74,7 +73,7 @@ const maxPage = computed(() => {
       <div id="mainPage">
         <div id="introProjects">
           <h3><span>Projets</span> réalisés</h3>
-          <div id="project1Button" class="projectLanguage">
+          <div class="projectLanguage">
             <button
               type="button"
               class="buttonLanguage"
@@ -83,6 +82,7 @@ const maxPage = computed(() => {
                 selectedLanguage = null;
                 page = 1;
               "
+              style="cursor: pointer"
             >
               Tous
             </button>
@@ -96,6 +96,7 @@ const maxPage = computed(() => {
                 selectedLanguage = language;
                 page = 1;
               "
+              style="cursor: pointer"
             >
               {{ language }}
             </button>
@@ -104,6 +105,7 @@ const maxPage = computed(() => {
 
         <div class="project" v-for="project in sliced" :key="project.id">
           <ProjectPreview :projectID="project.id" />
+
           <hr />
         </div>
 
@@ -140,25 +142,30 @@ const maxPage = computed(() => {
 </template>
 <style lang="scss">
 #mainPage {
-  #project1Button {
-    .buttonLanguage {
-      background: rgba(255, 255, 255, 1);
-      box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.1);
-      border-radius: 24px;
-      border: solid 0;
-      padding: 6px 16px;
-      margin: 5px;
-      &:hover {
-        box-shadow: 3px 5px 5px 0px rgba(16, 24, 40, 0.151);
-      }
-    }
-    .activeLanguage {
-      background: rgba(254, 237, 230, 1);
-      border: 1px solid rgba(255, 182, 151, 1);
-      box-shadow: 3px 5px 5px 0px rgba(16, 24, 40, 0.151);
-      color: rgba(237, 104, 46, 1);
+  .project {
+    a {
+      text-decoration: none;
     }
   }
+
+  .buttonLanguage {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+    border-radius: 24px;
+    border: solid 0;
+    padding: 6px 16px;
+    margin: 5px;
+    &:hover {
+      box-shadow: 3px 5px 5px 0px rgba(16, 24, 40, 0.151);
+    }
+  }
+  .activeLanguage {
+    background: rgba(254, 237, 230, 1);
+    border: 1px solid rgba(255, 182, 151, 1);
+    box-shadow: 3px 5px 5px 0px rgba(16, 24, 40, 0.151);
+    color: rgba(237, 104, 46, 1);
+  }
+
   #introProjects {
     display: flex;
     flex-direction: column;
@@ -166,6 +173,7 @@ const maxPage = computed(() => {
     box-shadow: 0px 15px 20px -12px rgba(67, 54, 35, 0.08);
     border-radius: 32px;
     padding: 0 32px 32px 32px;
+    margin-top: -32px;
 
     h3 {
       font-family: Plus Jakarta Sans;
@@ -176,6 +184,12 @@ const maxPage = computed(() => {
       text-align: left;
       color: rgba(38, 38, 38, 1);
       span {
+        font-family: Plus Jakarta Sans;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+        text-align: left;
         color: rgba(237, 104, 46, 1);
       }
     }
