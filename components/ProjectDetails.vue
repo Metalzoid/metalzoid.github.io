@@ -123,10 +123,10 @@ const onHide = () => (visibleRef.value = false)
       ></NuxtLink>
     </div>
     <div id="horizontalLastProjects">
-      <div class="project">
+      <div class="project" v-if="lastProjects.length > 0">
         <ProjectPreview :projectID="lastProjects[0].id" />
       </div>
-      <div class="project">
+      <div class="project" v-if="lastProjects.length > 1">
         <ProjectPreview :projectID="lastProjects[1].id" />
       </div>
     </div>
