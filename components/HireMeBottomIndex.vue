@@ -1,13 +1,15 @@
 <template>
-  <div id="hireMeBottomContent">
-    <img src="../img/hireMeBottomLogo.png" class="hireMeBottomLogo" />
-    <div id="hireMeBottomContentAndButton">
-      <h4>Besoin d’un accompagnement pour votre projet ?</h4>
-      <NuxtLink to="/contact"
-        ><button type="button" class="button">
-          <img src="../img/iconEnvelope.png" /> Hire me !
-        </button></NuxtLink
-      >
+  <div id="hireMeBottom" class="orangeButton">
+    <div id="hireMeBottomContent">
+      <img src="../img/hireMeBottomLogo.png" class="hireMeBottomLogo" />
+      <div id="hireMeBottomContentAndButton">
+        <h4>Besoin d’un accompagnement pour votre projet ?</h4>
+        <NuxtLink to="/contact"
+          ><button type="button" class="button">
+            <img src="../img/iconEnvelope.png" /> Hire me !
+          </button></NuxtLink
+        >
+      </div>
     </div>
   </div>
 </template>

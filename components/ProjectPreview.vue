@@ -9,18 +9,22 @@ const project = projectsData.find((element) => element.id === props.projectID);
 
 <template>
   <div>
-    <div
-      :style="{ backgroundImage: `url(${project.imagePreview})` }"
-      :class="{ imgProject: project.imagePreview }"
-    ></div>
-    <div id="project1Infos" class="projectInfos full">
-      <p class="project1Title">
+    <NuxtLink :to="`/projects/${project.id}`">
+      <div
+        :style="{
+          backgroundImage: `url(${project.images[0]})`,
+        }"
+        :class="{ imgProject: project.images[0] }"
+      ></div
+    ></NuxtLink>
+    <div id="projectInfos">
+      <p class="projectTitle">
         <strong>{{ project.name }}</strong> — {{ project.description }}
       </p>
-      <div id="project1Button" class="projectLanguage">
+      <div class="projectLanguage">
         <button
           type="button"
-          class="buttonLanguage nodejs"
+          class="buttonLanguage"
           v-for="lang in project.language"
           :key="lang"
         >

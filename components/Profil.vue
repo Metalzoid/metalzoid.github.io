@@ -13,20 +13,29 @@
       </div>
       <div id="social">
         <a href="https://github.com/guillaume-gagnaire"
-          ><img
-            class="github"
-            src="../img/Icon Buttongithub.png"
-            alt="Mon GitHub"
-        /></a>
+          ><div class="socialLinks">
+            <img
+              class="github"
+              src="../img/Icon Buttongithub.png"
+              alt="Mon GitHub"
+            /></div
+        ></a>
         <a href="https://www.linkedin.com/in/guillaume-gagnaire"
-          ><img
-            class="linkedin"
-            src="../img/Icon Buttonlinkedin.png"
-            alt="Mon LinkedIn"
-        /></a>
+          ><div class="socialLinks">
+            <img
+              class="linkedin"
+              src="../img/Icon Buttonlinkedin.png"
+              alt="Mon LinkedIn"
+            /></div
+        ></a>
         <a href="https://www.malt.fr/profile/guillaumegagnaire"
-          ><img class="malt" src="../img/Icon Buttonmalt.png" alt="Mon Malt"
-        /></a>
+          ><div class="socialLinks">
+            <img
+              class="malt"
+              src="../img/Icon Buttonmalt.png"
+              alt="Mon Malt"
+            /></div
+        ></a>
       </div>
       <NuxtLink to="/contact" class="hireMeProfilLink"
         ><button type="button" class="button hireMeProfil orangeButton">
@@ -44,8 +53,8 @@
 <style lang="scss">
 #profil {
   background-color: white;
-  height: 740px;
-  width: 372px;
+  height: 720px;
+  max-width: 340px;
   border-radius: 32px;
   padding: 24px;
   gap: 38px;
@@ -54,15 +63,18 @@
   flex-direction: column;
   align-items: center;
   margin: 0 20px;
+  width: 40%;
   #photoProfil {
     background: linear-gradient(180deg, #ff6f47 0%, #ff9447 100%);
     height: 400px;
-    width: 324px;
+    width: 100%;
+    max-width: 324px;
     border-radius: 42px;
     gap: 10px;
     img {
       height: 400px;
-      width: 324px;
+      width: 100%;
+      max-width: 324px;
       object-fit: cover;
       border-radius: 42px;
     }
@@ -78,7 +90,6 @@
     }
 
     #infos {
-      width: 324px;
       height: 108px;
 
       .name {
@@ -126,6 +137,18 @@
       width: 100%;
       justify-content: center;
       gap: 16px;
+      .socialLinks {
+        border: solid 1px rgba(221, 205, 195, 1);
+        border-radius: 50%;
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        &:hover {
+          border-color: rgba(237, 104, 46, 1);
+        }
+      }
     }
 
     .hireMeProfilLink {
