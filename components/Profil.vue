@@ -1,7 +1,7 @@
 <template>
   <div id="profil">
     <div id="photoProfil">
-      <img src="../assets/img/flo.png" alt="Photo de moi" />
+      <img src="/img/flo.png" alt="Photo de moi" />
     </div>
     <div id="profilInfos">
       <div id="infos">
@@ -15,17 +15,17 @@
         <a href="https://github.com/Metalzoid"
           ><img
             class="github"
-            src="../assets/img/Icon Buttongithub.png"
+            src="/img/Icon Buttongithub.png"
             alt="Mon GitHub"
         /></a>
         <a href="https://www.linkedin.com/in/florian-gagnaire-24606a294/"
           ><img
             class="linkedin"
-            src="../assets/img/Icon Buttonlinkedin.png"
+            src="/img/Icon Buttonlinkedin.png"
             alt="Mon LinkedIn"
         /></a>
         <!-- <a href="https://www.malt.fr/profile/guillaumegagnaire"
-          ><img class="malt" src="../assets/img/Icon Buttonmalt.png" alt="Mon Malt"
+          ><img class="malt" src="../img/Icon Buttonmalt.png" alt="Mon Malt"
         /></a> -->
       </div>
       <NuxtLink to="/contact" class="hireMeProfilLink"

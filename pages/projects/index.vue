@@ -1,5 +1,5 @@
 <script setup>
-import projectsData from "../assets/data/projects.json";
+import projectsData from "/_nuxt/assets/data/projects.json";
 const route = useRoute();
 const languages = [];
 for (let project of projectsData) {

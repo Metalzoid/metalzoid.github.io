@@ -1,5 +1,5 @@
 <script setup lang="js">
-import projectsData from "../assets/data/projects.json";
+import projectsData from "/_nuxt/assets/data/projects.json";
 
 const projects = projectsData.slice(-3)
 projects.reverse();
@@ -31,13 +31,13 @@ projects.reverse();
         <ProjectPreview :projectID="projects[0].id" />
       </NuxtLink>
     </div>
-    <div id="horizontalLastProjects">
+    <div id="horizontalLastProjects" v-if="projects.length > 1">
       <div id="project2" class="project">
         <NuxtLink :to="`/projects/${projects[1].id}`">
           <ProjectPreview :projectID="projects[1].id" />
         </NuxtLink>
       </div>
-      <div id="project3" class="project">
+      <div id="project3" class="project" v-if="projects.length > 2">
         <NuxtLink :to="`/projects/${projects[2].id}`">
           <ProjectPreview :projectID="projects[2].id" />
         </NuxtLink>

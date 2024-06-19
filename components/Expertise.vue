@@ -10,35 +10,35 @@
     </div>
     <div id="expertiseLogos">
       <div id="logoHtml" class="logos">
-        <img src="../assets/img/Html.png" />
+        <img src="/img/Html.png" />
         <p>HTML</p>
       </div>
       <div id="logoCss" class="logos">
-        <img src="../assets/img/Css.png" />
+        <img src="/img/Css.png" />
         <p>CSS</p>
       </div>
       <div id="logoJavascript" class="logos">
-        <img src="../assets/img/Javascript.png" />
+        <img src="/img/Javascript.png" />
         <p>Javascript</p>
       </div>
       <div id="logoRuby" class="logos">
-        <img src="../assets/img/Ruby.png" />
+        <img src="/img/Ruby.png" />
         <p>Ruby</p>
       </div>
       <div id="logoRails" class="logos">
-        <img src="../assets/img/Rails.png" />
+        <img src="/img/Rails.png" />
         <p>Ruby on Rails</p>
       </div>
       <div id="logoVueJS" class="logos">
-        <img src="../assets/img/vueJS.png" />
+        <img src="/img/vueJS.png" />
         <p>Vue.js</p>
       </div>
       <div id="logoNuxtJS" class="logos">
-        <img src="../assets/img/nuxtJS.png" />
+        <img src="/img/nuxtJS.png" />
         <p>Nuxt.js</p>
       </div>
       <div id="logoNodeJS" class="logos">
-        <img src="../assets/img/postgreSQL.png" />
+        <img src="/img/postgreSQL.png" />
         <p>PostgreSQL</p>
       </div>
     </div>

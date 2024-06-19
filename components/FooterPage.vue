@@ -1,7 +1,7 @@
 <template>
   <footer>
     <hr />
-    <img src="../assets/img/logo.png" class="footerLogo" />
+    <img src="/img/logo.png" class="footerLogo" />
     <p>© 2024 Florian Gagnaire. Tous droits réservés.</p>
   </footer>
 </template>

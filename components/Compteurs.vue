@@ -3,21 +3,21 @@
     <div id="compteurs1">
       <div id="compteurExperience">
         <h1 class="exp animatedNumber">
-          <animateNumber :number="8" />
+          <animateNumber :number="3" />
         </h1>
-        <p>Années<br />d'expérience</p>
+        <p>Mois<br />d'expérience</p>
       </div>
       <div id="compteurProjects">
         <h1 class="projets animatedNumber">
-          <animateNumber :number="6" />
+          <animateNumber :number="2" />
         </h1>
-        <p>Projets 360<br />finalisés</p>
+        <p>Projets <br />finalisés</p>
       </div>
     </div>
     <div id="compteurs2">
       <div id="compteurClients">
         <h1 class="clients animatedNumber">
-          <animateNumber :number="7" />
+          <animateNumber :number="1" />
         </h1>
         <p>Clients<br />satisfaits</p>
       </div>
