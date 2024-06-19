@@ -1,5 +1,5 @@
 <script setup>
-import projectsData from "../data/projects.json";
+import projectsData from "../assets/data/projects.json";
 
 const languages = [];
 for (let project of projectsData) {

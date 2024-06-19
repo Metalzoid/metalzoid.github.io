@@ -90,7 +90,7 @@ export default {
       </p>
       <hr />
       <div id="profilContact">
-        <img src="../img/flo.png" alt="Photo de Moi" class="photoProfil" />
+        <img src="../assets/img/flo.png" alt="Photo de Moi" class="photoProfil" />
 
         <div id="infosProfil">
           <a href="mailto:guillaume@gagnaire.dev">guillaume@gagnaire.dev</a>
@@ -99,19 +99,19 @@ export default {
             <a href="https://github.com/guillaume-gagnaire"
               ><img
                 class="github"
-                src="../img/Icon Buttongithub.png"
+                src="../assets/img/Icon Buttongithub.png"
                 alt="Mon GitHub"
             /></a>
             <a href="https://www.linkedin.com/in/guillaume-gagnaire"
               ><img
                 class="linkedin"
-                src="../img/Icon Buttonlinkedin.png"
+                src="../assets/img/Icon Buttonlinkedin.png"
                 alt="Mon LinkedIn"
             /></a>
             <a href="https://www.malt.fr/profile/guillaumegagnaire"
               ><img
                 class="malt"
-                src="../img/Icon Buttonmalt.png"
+                src="../assets/img/Icon Buttonmalt.png"
                 alt="Mon Malt"
             /></a>
           </div>

@@ -9,35 +9,35 @@
   </div>
   <div id="expertiseLogos">
     <div id="logoNodeJS" class="logos">
-      <img src="../img/nodeJS.png" />
+      <img src="../assets/img/nodeJS.png" />
       <p>Node.js</p>
     </div>
     <div id="logoJavascript" class="logos">
-      <img src="../img/Javascript.png" />
+      <img src="../assets/img/Javascript.png" />
       <p>Javascript</p>
     </div>
     <div id="logoVueJS" class="logos">
-      <img src="../img/vueJS.png" />
+      <img src="../assets/img/vueJS.png" />
       <p>Vue.js</p>
     </div>
     <div id="logoNuxtJS" class="logos">
-      <img src="../img/nuxtJS.png" />
+      <img src="../assets/img/nuxtJS.png" />
       <p>Nuxt.js</p>
     </div>
     <div id="logoK8s" class="logos">
-      <img src="../img/K8s.png" />
+      <img src="../assets/img/K8s.png" />
       <p>K8s</p>
     </div>
     <div id="logoPwa" class="logos">
-      <img src="../img/Pwa.png" />
+      <img src="../assets/img/Pwa.png" />
       <p>Pwa</p>
     </div>
     <div id="logoHtml" class="logos">
-      <img src="../img/Html.png" />
+      <img src="../assets/img/Html.png" />
       <p>HTML</p>
     </div>
     <div id="logoCss" class="logos">
-      <img src="../img/Css.png" />
+      <img src="../assets/img/Css.png" />
       <p>CSS</p>
     </div>
   </div>

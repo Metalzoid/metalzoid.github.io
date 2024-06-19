@@ -2,9 +2,9 @@
   <div id="hireMeIndex">
     <a href="/contact">
       <div id="logoHireMe">
-        <img src="../img/VectorhireMeElipse.png" class="vectorHireMe" />
-        <img src="../img/iconEnvelope.png" class="iconEnvelope" />
-        <img src="../img/elipseHireMe.png" class="elipseHireMe" />
+        <img src="../assets/img/VectorhireMeElipse.png" class="vectorHireMe" />
+        <img src="../assets/img/iconEnvelope.png" class="iconEnvelope" />
+        <img src="../assets/img/elipseHireMe.png" class="elipseHireMe" />
       </div>
     </a>
   </div>
