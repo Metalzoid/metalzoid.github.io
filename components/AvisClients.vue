@@ -1,7 +1,7 @@
 <script setup>
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
-import opinionsData from "../data/opinions.json";
+import opinionsData from "../assets/data/opinions.json";
 const carouselAvis = ref(null);
 const items = opinionsData;
 </script>

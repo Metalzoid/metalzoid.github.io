@@ -33,7 +33,7 @@ function scrollToTopMain() {
       <header>
         <div id="navigation">
           <NuxtLink to="/" @click="scrollToTopMain()"
-            ><img class="logo" src="/img/logo.svg" alt="logo"
+            ><img class="logo" src="/assets/img/logo.png" alt="logo"
           /></NuxtLink>
           <div id="nav">
             <ul class="nav">
@@ -73,7 +73,7 @@ function scrollToTopMain() {
             <nav id="mobileNav">
               <div id="profilMobile">
                 <div id="photoProfilMobile">
-                  <img src="/img/flo.png" alt="Photo de moi" />
+                  <img src="/assets/img/flo.png" alt="Photo de moi" />
                 </div>
                 <div id="profilInfosMobile">
                   <div id="infosMobile">
@@ -86,19 +86,19 @@ function scrollToTopMain() {
                     <a href="https://github.com/guillaume-gagnaire"
                       ><img
                         class="github"
-                        src="/img/Icon Buttongithub.png"
+                        src="/assets/img/Icon Buttongithub.png"
                         alt="Mon GitHub"
                     /></a>
                     <a href="https://www.linkedin.com/in/guillaume-gagnaire"
                       ><img
                         class="linkedin"
-                        src="/img/Icon Buttonlinkedin.png"
+                        src="/assets/img/Icon Buttonlinkedin.png"
                         alt="Mon LinkedIn"
                     /></a>
                     <a href="https://www.malt.fr/profile/guillaumegagnaire"
                       ><img
                         class="malt"
-                        src="/img/Icon Buttonmalt.png"
+                        src="/assets/img/Icon Buttonmalt.png"
                         alt="Mon Malt"
                     /></a>
                   </div>
@@ -112,7 +112,7 @@ function scrollToTopMain() {
                     class="active"
                     @click="toggleNavMobile(), scrollToTopMain()"
                     ><img
-                      src="/img/mobileNav/index.png"
+                      src="/assets/img/mobileNav/index.png"
                       alt=""
                     />Acceuil</NuxtLink
                   >
@@ -120,14 +120,14 @@ function scrollToTopMain() {
 
                 <li>
                   <NuxtLink to="/projects" @click="toggleNavMobile()"
-                    ><img src="/img/mobileNav/projects.png" alt="" />Projets
+                    ><img src="/assets/img/mobileNav/projects.png" alt="" />Projets
                     Réalisés</NuxtLink
                   >
                 </li>
                 <li>
                   <NuxtLink to="/contact" @click="toggleNavMobile()"
                     ><img
-                      src="/img/mobileNav/contact.png"
+                      src="/assets/img/mobileNav/contact.png"
                       alt=""
                     />Contact</NuxtLink
                   >

@@ -1,5 +1,5 @@
 <script setup lang="js">
-import projectsData from "../data/projects.json";
+import projectsData from "../assets/data/projects.json";
 const props = defineProps({
   projectID: String,
 });
