@@ -90,17 +90,17 @@ export default {
       </p>
       <hr />
       <div id="profilContact">
-        <img src="../assets/img/flo.png" alt="Photo de Moi" class="photoProfil" />
+        <img src="/img/flo.png" alt="Photo de Moi" class="photoProfil" />
 
         <div id="infosProfil">
-          <a href="mailto:guillaume@gagnaire.dev">guillaume@gagnaire.dev</a>
+          <a href="mailto:gagnaire.flo@gmail.com">gagnaire.flo@gmail.com</a>
           <p class="localisation">Bordeaux</p>
           <div id="social">
             <div class="socialLinks">
               <a href="https://github.com/Metalzoid"
                 ><img
                   class="github"
-                  src="../assets/img/Icon Buttongithub.png"
+                  src="/img/Icon Buttongithub.png"
                   alt="Mon GitHub"
               /></a>
             </div>
@@ -108,7 +108,7 @@ export default {
               <a href="https://www.linkedin.com/in/florian-gagnaire-24606a294/"
                 ><img
                   class="linkedin"
-                  src="../assets/img/Icon Buttonlinkedin.png"
+                  src="/img/Icon Buttonlinkedin.png"
                   alt="Mon LinkedIn"
               /></a>
             </div>
@@ -353,10 +353,10 @@ export default {
 
   .photoProfil {
     width: 140px;
-    height: fit-content;
-    object-fit: contain;
+    height: 140px;
+    object-fit: cover;
     background: linear-gradient(180deg, #ff6f47 0%, #ff9447 100%);
-    border-radius: 100px;
+    border-radius: 50%;
     border: solid 1px white;
   }
 

@@ -1,5 +1,5 @@
 <script setup lang="js">
-import projectsData from "../assets/data/projects.json";
+import projectsData from "/_nuxt/assets/data/projects.json";
 const props = defineProps({
   projectID: String,
 });
@@ -68,6 +68,7 @@ const project = projectsData.find((element) => element.id === route.params.id );
   background-size: contain;
   background-repeat: no-repeat;
   aspect-ratio: 16/9;
+  background-position-x: center;
 }
 
 #imagesProject {
