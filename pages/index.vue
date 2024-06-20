@@ -25,7 +25,7 @@
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 122px 0 0 0;
+  padding: 122px 20px 0 20px;
   #mainPage {
     max-width: 900px;
     gap: 70px;
