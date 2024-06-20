@@ -23,5 +23,20 @@
       "date": "14/06/2024",
       "message": "Un super site qu'on à créé ensemble, tous les 4 !"
     }
+  },
+  {
+    "id": "portfolio",
+    "name": "Mon Portfolio",
+    "description": "Portfolio",
+    "imagePreview": "/projects/portfolio/preview.png",
+    "language": ["Vue.js","Nuxt.js", "HTML5", "CSS3", "Javascript"],
+    "images": [
+      "/projects/portfolio/1.png",
+      "/projects/portfolio/2.png",
+      "/projects/portfolio/3.png",
+      "/projects/portfolio/4.png"
+    ],
+    "intro": "Mon Portfolio (Vous êtes ici 😄 )",
+    "content": "Petit Portfolio fais en Nuxt.js, complètement responsive."
   }
 ]

@@ -163,7 +163,7 @@
   #profil {
     background: none;
     height: auto;
-    width: auto;
+    width: 100%;
     border-radius: none;
     box-shadow: none;
     margin: 0;

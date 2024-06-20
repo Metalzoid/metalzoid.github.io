@@ -77,7 +77,7 @@ const project = projectsData.find((element) => element.id === route.params.id );
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 15px;
-  #image {
+  .image {
     width: 47%;
   }
 }
@@ -229,6 +229,7 @@ const project = projectsData.find((element) => element.id === route.params.id );
   display: flex;
   justify-content: space-between;
   width: 100%;
+  gap: 2rem;
   margin-top: 35px;
   .project {
     width: 49%;
@@ -237,4 +238,12 @@ const project = projectsData.find((element) => element.id === route.params.id );
     }
   }
 }
+
+@media only screen and (max-width: 420px) {
+  #horizontalLastProjects {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 </style>

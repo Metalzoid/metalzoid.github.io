@@ -73,14 +73,14 @@ const onHide = () => (visibleRef.value = false)
         :style="{ backgroundImage: `url(${image})` }"
         :class="{ imgProject: image }"
         @click="showMultiple(index + 1)"
-        id="image"
+        class="image"
       ></div>
       <hr />
     </div>
 
     <div id="content"><span v-html="mdResult(project.content)"></span></div>
     <hr v-if="project.content" />
-    <div id="opinionsClientsBox" v-if="project.opinion.message">
+    <div id="opinionsClientsBox" v-if="project.opinion">
       <div id="enTeteopinionsClient">
         <div
           id="photoClient"
@@ -105,13 +105,13 @@ const onHide = () => (visibleRef.value = false)
           </div>
         </div>
       </div>
-      <div id="opinions">
+      <div id="opinions" >
         <p class="opinions">
           <CuttableText :text="project.opinion.message" :max="210" />
         </p>
       </div>
     </div>
-    <hr v-if="project.opinion.message" />
+    <hr v-if="project.opinion" />
     <div id="projectsTitle">
       <h2>Mes <span>dernières réalisations</span></h2>
       <NuxtLink to="/projects"
@@ -142,6 +142,7 @@ const onHide = () => (visibleRef.value = false)
   display: flex;
   flex-direction: column;
   gap: 60px;
+  width: 100%;
   #introProject {
     font-family: Plus Jakarta Sans;
     font-size: 18px;
@@ -172,7 +173,7 @@ const onHide = () => (visibleRef.value = false)
     }
     h1 {
       font-family: Plus Jakarta Sans;
-      font-size: 32px;
+      font-size: 2rem;
       font-weight: 500;
       line-height: 40px;
       letter-spacing: -0.02em;
@@ -198,6 +199,7 @@ const onHide = () => (visibleRef.value = false)
   background-repeat: no-repeat;
   aspect-ratio: 16/9;
   cursor: pointer;
+  border-radius: 0 !important;
 }
 
 #imagesProject {
@@ -206,7 +208,7 @@ const onHide = () => (visibleRef.value = false)
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 15px;
-  #image {
+  .image {
     width: 47%;
   }
 }
@@ -333,6 +335,7 @@ const onHide = () => (visibleRef.value = false)
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
   a {
     text-decoration: none;
   }
@@ -368,5 +371,32 @@ const onHide = () => (visibleRef.value = false)
       font-size: 40px;
     }
   }
+
+  #projectDetailsInfos {
+    h1 {
+      font-size: 1.7rem !important;
+    }
+  }
 }
+
+@media only screen and (max-width: 600px) {
+  #imagesProject {
+    .image {
+      width: 100% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #projectDetailsInfos {
+    padding: 15px !important;
+    h1 {
+      font-size: 1.2rem !important;
+    }
+    p {
+      font-size: 0.8rem !important;
+    }
+  }
+}
+
 </style>

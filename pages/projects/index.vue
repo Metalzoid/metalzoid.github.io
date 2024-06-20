@@ -205,7 +205,6 @@ const maxPage = computed(() => {
   }
   .imgProject {
     height: auto;
-    width: 100%;
     border-radius: 32px;
   }
   #bottomProjects {
