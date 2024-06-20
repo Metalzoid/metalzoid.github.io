@@ -77,30 +77,30 @@ function scrollToTopMain() {
                 </div>
                 <div id="profilInfosMobile">
                   <div id="infosMobile">
-                    <a href="mailto:guillaume@gagnaire.dev"
-                      ><p class="email">guillaume@gagnaire.dev</p></a
+                    <a href="mailto:gagnaire.flo@gmail.com"
+                      ><p class="email">gagnaire.flo@gmail.com</p></a
                     >
                     <p class="localisation">Bordeaux</p>
                   </div>
                   <div id="socialMobile">
-                    <a href="https://github.com/guillaume-gagnaire"
+                    <a href="https://github.com/Metalzoid"
                       ><img
                         class="github"
                         src="/img/Icon Buttongithub.png"
                         alt="Mon GitHub"
                     /></a>
-                    <a href="https://www.linkedin.com/in/guillaume-gagnaire"
+                    <a href="https://www.linkedin.com/in/florian-gagnaire"
                       ><img
                         class="linkedin"
                         src="/img/Icon Buttonlinkedin.png"
                         alt="Mon LinkedIn"
                     /></a>
-                    <a href="https://www.malt.fr/profile/guillaumegagnaire"
+                    <!-- <a href="https://www.malt.fr/profile/guillaumegagnaire"
                       ><img
                         class="malt"
                         src="/img/Icon Buttonmalt.png"
                         alt="Mon Malt"
-                    /></a>
+                    /></a> -->
                   </div>
                 </div>
               </div>

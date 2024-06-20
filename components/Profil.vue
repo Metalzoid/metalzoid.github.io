@@ -18,7 +18,7 @@
             src="/img/Icon Buttongithub.png"
             alt="Mon GitHub"
         /></a>
-        <a href="https://www.linkedin.com/in/florian-gagnaire-24606a294/"
+        <a href="https://www.linkedin.com/in/florian-gagnaire/"
           ><img
             class="linkedin"
             src="/img/Icon Buttonlinkedin.png"
