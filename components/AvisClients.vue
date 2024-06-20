@@ -21,7 +21,6 @@ const items = opinionsData;
       <div id="introOpinions">
         <h2>Ils m'ont fait <span>confiance !</span></h2>
       </div>
-
       <Carousel
         ref="carouselAvis"
         :wrap-around="true"

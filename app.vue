@@ -117,7 +117,6 @@ function scrollToTopMain() {
                     />Acceuil</NuxtLink
                   >
                 </li>
-
                 <li>
                   <NuxtLink to="/projects" @click="toggleNavMobile()"
                     ><img src="/img/mobileNav/projects.png" alt="" />Projets
@@ -138,9 +137,7 @@ function scrollToTopMain() {
         </div>
       </header>
     </div>
-
     <NuxtPage />
-
     <div id="toTopButton" @click="scrollToTop()">
       <font-awesome-icon icon="arrow-up" />
     </div>
