@@ -25,12 +25,13 @@
 #intro {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 #presentation {
   h1 {
     font-family: Plus Jakarta Sans;
-    font-size: 52px;
+    font-size: 3.5rem;
     font-weight: 400;
     line-height: 63px;
     letter-spacing: -0.02em;
@@ -40,7 +41,7 @@
     max-width: 700px;
     span {
       font-family: Plus Jakarta Sans;
-      font-size: 52px;
+      font-size: 3.5rem;
       font-weight: 400;
       line-height: 63px;
       letter-spacing: -0.02em;
@@ -107,9 +108,22 @@
     }
   }
 }
+
 @media only screen and (max-width: 855px) {
   #hireMeIndex {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  #presentation {
+    h1 {
+      font-size: 2.5rem;
+      span{
+        font-size: 2.5rem;
+      }
+    }
+
   }
 }
 </style>

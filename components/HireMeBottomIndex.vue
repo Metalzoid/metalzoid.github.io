@@ -26,7 +26,7 @@
 
     h4 {
       font-family: Plus Jakarta Sans;
-      font-size: 28px;
+      font-size: 1.5rem;
       font-weight: 500;
       line-height: 36px;
       letter-spacing: -0.02em;
@@ -68,7 +68,6 @@
 @media only screen and (max-width: 855px) {
   #hireMeBottom {
     border-radius: 44px;
-    min-width: fit-content;
     #hireMeBottomContent {
       flex-direction: column;
       align-items: flex-start;
@@ -84,5 +83,14 @@
       }
     }
   }
+}
+
+@media only screen and (max-width: 300px) {
+  #hireMeBottomContent {
+    h4 {
+      font-size: 1.1rem !important;
+    }
+  }
+
 }
 </style>

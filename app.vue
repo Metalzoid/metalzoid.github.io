@@ -150,8 +150,6 @@ html {
   font-size: 16px;
   margin: 0;
   padding: 0;
-
-  min-width: 360px;
 }
 
 body {

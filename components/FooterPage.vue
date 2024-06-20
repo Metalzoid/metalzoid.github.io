@@ -17,7 +17,7 @@ footer {
 
   img {
     align-items: center;
-    width: 350px;
+    width: 15rem;
 
   }
 
