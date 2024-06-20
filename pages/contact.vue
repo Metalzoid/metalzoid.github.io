@@ -1,6 +1,7 @@
 <script>
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
+import emailjs from '@emailjs/browser';
 export default {
   data() {
     return {
@@ -56,21 +57,41 @@ export default {
     FormValid() {
       this.validateForm();
       if (Object.keys(this.errors).length === 0) {
-        // Logique d'envoi du formulaire ici
         this.formIsValid = true;
-        console.log(this.formIsValid);
       } else {
         this.formIsValid = false;
-        console.log(this.formIsValid);
       }
     },
 
     submitForm() {
       this.validateForm();
-      // Si le formulaire est valide, vous pouvez envoyer les données
       if (Object.keys(this.errors).length <= 0) {
-        // Logique d'envoi du formulaire ici
-        console.log("Formulaire valide, données envoyées:", this.formData);
+        emailjs
+        .sendForm('service_v7kt4po', 'template_2lyk6fd',  this.$refs.form, {
+          publicKey: 'Xz2j-88Lg10qbQmXO',
+        })
+        .then(
+          () => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+            this.formData.name = "";
+            this.formData.firstname = "";
+            this.formData.email = "";
+            this.formData.phoneNumber = "";
+            this.formData.message = "";
+            this.formData.entreprise = "";
+            this.$refs.modalForm.style.opacity= "1";
+            setTimeout(() => {
+              this.$refs.modalForm.style.opacity= "0";
+            }, 3000);
+
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
       } else {
         console.log("Formulaire invalide, veuillez corriger les erreurs.");
       }
@@ -125,10 +146,12 @@ export default {
       </div>
       <FooterPage />
     </div>
+
     <form
       id="form"
       method="post"
       class="form"
+      ref="form"
       @submit.prevent="submitForm"
       @input="FormValid"
     >
@@ -137,7 +160,9 @@ export default {
           Laissez-moi vos coordonnées <br />et
           <span>je vous recontacterai rapidement !</span>
         </h6>
-
+        <div id="modalSubmit" ref="modalForm">
+          <h2>Message envoyé !</h2>
+        </div>
         <div id="formInputs">
           <div id="formNameDiv">
             <div id="formFirstname">
@@ -260,21 +285,6 @@ export default {
 </template>
 
 <style lang="scss">
-@media only screen and (max-width: 600px) {
-  #formNameDiv {
-    flex-direction: column;
-    #formFirstname {
-      margin-bottom: 15px;
-    }
-  }
-  #formContactInfos {
-    flex-direction: column;
-    #formEmail {
-      margin-bottom: 15px;
-    }
-  }
-}
-
 @media only screen and (max-width: 925px) {
   #mainPageContact {
     flex-direction: column;
@@ -294,6 +304,22 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  #formNameDiv {
+    flex-direction: column;
+    #formFirstname {
+      margin-bottom: 15px;
+    }
+  }
+  #formContactInfos {
+    flex-direction: column;
+    #formEmail {
+      margin-bottom: 15px;
+    }
+  }
+}
+
 #mainPageContact {
   display: flex;
   justify-content: space-around;
@@ -345,6 +371,22 @@ export default {
       color: rgba(237, 104, 46, 1);
     }
   }
+}
+
+#modalSubmit {
+  position: absolute;
+  top: 17rem;
+  max-width: 800px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: solid 1px #ed682e;
+  z-index: 100;
+  border-radius: 15px;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  width: 80%;
+  text-align: center;
 }
 
 #profilContact {
