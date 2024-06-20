@@ -98,6 +98,7 @@ const items = opinionsData;
     border: none;
     #enTeteopinionsClient {
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
       align-items: center;
       margin: 25px;
@@ -182,9 +183,9 @@ const items = opinionsData;
   }
 }
 
-@media only screen and (max-width: 379px) {
-  #avisClients {
-    display: none;
+@media only screen and (max-width: 457px) {
+  #logoClient {
+    margin: 0 auto;
   }
 }
 </style>
