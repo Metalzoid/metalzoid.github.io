@@ -105,7 +105,7 @@ export default {
               /></a>
             </div>
             <div class="socialLinks">
-              <a href="https://www.linkedin.com/in/florian-gagnaire-24606a294/"
+              <a href="https://www.linkedin.com/in/florian-gagnaire/"
                 ><img
                   class="linkedin"
                   src="/img/Icon Buttonlinkedin.png"

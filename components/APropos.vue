@@ -19,7 +19,6 @@
         >Avec un diplôme de Developpeur Web obtenu à l'école LeWagon de Bordeaux,</span
       >
       j'ai acquis les compétences nécessaires pour vous accompagner dans tous vos projets.
-
     </p>
     <p>
       Vision globale, mais les mains dans le cambouis,
