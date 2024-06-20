@@ -6,6 +6,7 @@ function toggleNavMobile() {
     mobileChecked.value = false;
   }
 }
+
 function scrollToTop() {
   window.scrollTo({
     top: 0,
@@ -39,7 +40,7 @@ function scrollToTopMain() {
             <ul class="nav">
               <li>
                 <NavigationLink link="/" @click="scrollToTopMain()"
-                  >Acceuil</NavigationLink
+                  >Accueil</NavigationLink
                 >
               </li>
               <li>
@@ -114,7 +115,7 @@ function scrollToTopMain() {
                     ><img
                       src="/img/mobileNav/index.png"
                       alt=""
-                    />Acceuil</NuxtLink
+                    />Accueil</NuxtLink
                   >
                 </li>
                 <li>
