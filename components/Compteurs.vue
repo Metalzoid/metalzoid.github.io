@@ -9,7 +9,7 @@
       </div>
       <div id="compteurProjects">
         <h1 class="projets animatedNumber">
-          <animateNumber :number="2" />
+          <animateNumber :number="3" />
         </h1>
         <p>Projets <br />finalisés</p>
       </div>
