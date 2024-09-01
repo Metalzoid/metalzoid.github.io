@@ -4,7 +4,7 @@
     "name": "Doogs",
     "description": "Mobile Web site",
     "imagePreview": "/projects/doogs/preview.png",
-    "language": ["Rails", "HTML5", "CSS3", "Stimulus"],
+    "language": ["Rails 7", "HTML5", "CSS3", "Stimulus"],
     "images": [
       "/projects/doogs/1.png",
       "/projects/doogs/2.png",
@@ -29,7 +29,7 @@
     "name": "Mon Portfolio",
     "description": "Portfolio",
     "imagePreview": "/projects/portfolio/preview.png",
-    "language": ["Vue.js","Nuxt.js", "HTML5", "CSS3", "Javascript"],
+    "language": ["Vue.js", "Nuxt.js", "HTML5", "CSS3", "Javascript"],
     "images": [
       "/projects/portfolio/1.png",
       "/projects/portfolio/2.png",
@@ -38,5 +38,21 @@
     ],
     "intro": "Mon Portfolio (Vous êtes ici 😄 )",
     "content": "Petit Portfolio faiT en Nuxt.js, complètement responsive."
+  },
+  {
+    "id": "datescalendar",
+    "name": "DatesCalendar API",
+    "description": "This API is designed to efficiently manage reservations for flexible and personalized management.",
+    "imagePreview": "/projects/datescalendar/1.png",
+    "language": ["Rails 7", "HTML5", "CSS3", "Stimulus", "Javascript"],
+    "images": [
+      "/projects/datescalendar/1.png",
+      "/projects/datescalendar/2.png",
+      "/projects/datescalendar/3.png",
+      "/projects/datescalendar/4.png",
+      "/projects/datescalendar/5.png"
+    ],
+    "intro": "We are pleased to present our Reservation API, developed with Ruby on Rails 7. This API is designed to efficiently manage reservations, allowing administrators to create users and offering different roles to users for flexible and personalized management.",
+    "content": "#### Key Features\n\n1. **User Creation by Admin**\n- Administrators can create users from a remote site.\n- Each user can have one of the following three roles: Seller, Customer, or Both.\n2. **Role Management**\n- **Seller**: Sellers can offer services and manage their availability.\n- **Customer**: Customers can book services and leave comments.\n- **Both**: Users with this role can both sell services and book services offered by other sellers.\n#### Data Models\n1. **Service**\n- **Attributes**: title, price, time (in minutes)\n- **Description**: Represents the offers provided by sellers (or users with the Both role).\n2. **Availability**\n- **Attributes**: start_date, end_date, available\n- **Description**: Indicates the periods of availability or unavailability of a seller or a user with the Both role.\n3. **Appointments**\n- **Attributes**: start_date, end_date (automatically calculated if not specified and if one or more services are selected), price (calculated based on the specified services), customer comment, seller comment\n- **Description**: Represents the appointments booked by customers, including service details, dates, and comments.\n#### Availability Retrieval\n- **Complete Model**: Retrieve the full availability model.\n- **Specified Interval**: Retrieve availability within a specified interval in minutes, e.g., `{ from: start_date, to: end_date }`.\n#### Availability Creation\n- **Time Slots**: Create availability with specified minimum and maximum hours, even if spanning multiple days.\n#### Advanced Features\n- **Automatic End Date Calculation**: If the end date is not specified when creating an appointment, it is automatically calculated based on the selected services.\n- **Automatic Price Calculation**: The price of the appointment is automatically calculated based on the specified services."
   }
 ]
